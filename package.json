@@ -4,9 +4,10 @@
   "description": "",
   "main": "blog.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	  "start":"node blog.js"
   },
-  "start":"node blog.js",
+  
   "author": "Rohit Sikarwar",
   "license": "ISC",
   "dependencies": {
