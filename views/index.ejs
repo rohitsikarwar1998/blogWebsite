@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+	<% for(var i=0;i<blogs.length;i++) { %>
+
+		<div class="ui main text container segment">
+
+			<div class="ui huge header">Blog Title</div>
+			<div class="ui items">
+				<div class="item">
+					<div class="image">
+						<img class="ui centered rounded image" src=<%=blogs[i].image %>>
+					</div>
+					<div class="content">
+						<span>
+							<%= blogs[i].created.toDateString() %>
+						</span>
+						<div>
+							<%- blogs[i].body.substring(0,100) %>  ...
+						</div>
+						<a href="/blogs/<%=blogs[i]._id%>">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<% } %>
+
+			<%- include("partials/footer") %>
