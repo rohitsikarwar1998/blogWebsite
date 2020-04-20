@@ -14,8 +14,7 @@ app.use(methodOverride("_method"));     // we send post request from the html fo
 
 mongoose.connect('mongodb+srv://rohit:rohitsikarwar@mongodb-ut0eq.gcp.mongodb.net/blog_app?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useFindAndModify: false
+	useUnifiedTopology: true
 }).then(()=> {
 	console.log("connected to db");
 }).catch(err => {
@@ -108,6 +107,6 @@ app.delete('/blogs/:id',(req,res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
 	console.log('server is running');
 });
