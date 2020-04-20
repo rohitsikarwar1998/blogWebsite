@@ -16,7 +16,7 @@ var url=process.env.DATABASEURL||'mongodb://localhost/blog_post';
 
 
 
-mongoose.connect(url, {
+mongoose.connect("mongodb+srv://rohit:rohitsikarwar@mongodb-ut0eq.gcp.mongodb.net/blog_app?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false
