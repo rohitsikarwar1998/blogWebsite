@@ -12,7 +12,11 @@ app.use(express.static('public'));
 app.use(methodOverride("_method"));     // we send post request from the html form and by                                              // using method override we get as a put or delete 
                                          // request..
 
-mongoose.connect('mongodb://localhost/blog_post', {
+var url=process.env.DATABASEURL||'mongodb://localhost/blog_post';
+
+
+
+mongoose.connect(url, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false
